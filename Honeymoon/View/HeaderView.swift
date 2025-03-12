@@ -21,7 +21,10 @@ struct HeaderView: View {
             
             Spacer()
             
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+            Image("logo-honeymoon-pink")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 28)
             
             Spacer()
             
