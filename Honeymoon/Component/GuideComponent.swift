@@ -17,7 +17,34 @@ struct GuideComponent: View {
     // MARK: - BODY
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(alignment: .center, spacing: 20) {
+            Image(systemName: icon)
+                .font(.largeTitle)
+                .foregroundColor(Color.pink)
+            
+            VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                    Text(title.uppercased())
+                        .font(.title)
+                        .fontWeight(.heavy)
+                    
+                    Spacer()
+                    
+                    Text(subtitle.uppercased())
+                        .font(.footnote)
+                        .fontWeight(.heavy)
+                        .foregroundColor(Color.pink)
+                } //: HSTACK
+                
+                Divider().padding(.bottom, 4)
+                
+                Text(description)
+                    .font(.footnote)
+                    .foregroundColor(Color.secondary)
+                    // It helps to render the text to use the dimensions. In this case we want to make sure that the height of the text will be expanded. Even if the current view is smaller than the dimension of this text
+                    .fixedSize(horizontal: false, vertical: true)
+            } //: VSTACK
+        } //: HSTACK
     }
 }
 
