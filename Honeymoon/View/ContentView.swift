@@ -14,7 +14,7 @@ struct ContentView: View {
             
             Spacer()
             
-            CardView(honeymoon: honeymoonData[1])
+            CardView(honeymoon: honeymoonData[2])
                 // FIXME: Add padding to the cards later on.
                 .padding()
             
