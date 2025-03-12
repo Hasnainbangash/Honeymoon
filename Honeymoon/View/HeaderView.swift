@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HeaderView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         HStack {
             Button(action: {
@@ -40,6 +44,8 @@ struct HeaderView: View {
         .padding()
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview(traits: .fixedLayout(width: 375, height: 80)) {
     HeaderView()

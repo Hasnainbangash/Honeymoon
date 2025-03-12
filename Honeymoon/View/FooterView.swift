@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct FooterView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         HStack {
             Image(systemName: "xmark.circle")

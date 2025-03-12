@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct HeaderComponent: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         VStack(alignment: .center, spacing: 20) {
             Capsule()
@@ -22,6 +26,8 @@ struct HeaderComponent: View {
         } //: VSTACK
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview(traits: .fixedLayout(width: 375, height: 128)) {
     HeaderComponent()

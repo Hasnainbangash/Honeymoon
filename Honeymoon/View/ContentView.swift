@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    // MARK: - PROPERTIES
+    
+    // MARK: - BODY
+    
     var body: some View {
         VStack {
             HeaderView()
@@ -24,6 +28,8 @@ struct ContentView: View {
         } //: VSTACK
     }
 }
+
+// MARK: - PREVIEW
 
 #Preview {
     ContentView()
