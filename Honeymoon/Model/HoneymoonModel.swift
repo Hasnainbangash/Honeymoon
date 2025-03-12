@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - HONEYMOON MODEL
+
 struct Destination {
     var place: String
     var country: String

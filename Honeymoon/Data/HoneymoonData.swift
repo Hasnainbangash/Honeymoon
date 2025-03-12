@@ -7,6 +7,8 @@
 
 import SwiftUI
 
+// MARK: - HONEYMOON DATA
+
 var honeymoonData: [Destination] = [
     Destination(
       place: "Veligandu",
