@@ -38,7 +38,15 @@ struct CardView: View {
                         )
                     
                     Text(honeymoon.country.uppercased())
-                        .foregroundColor(Color.white)
+                        .foregroundColor(Color.black)
+                        .font(.footnote)
+                        .fontWeight(.bold)
+                        .frame(minWidth: 85)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(
+                            Capsule().fill(Color.white)
+                        )
                 } //: VSTACK
                     .frame(minWidth: 280)
                     .padding(.bottom, 50)
