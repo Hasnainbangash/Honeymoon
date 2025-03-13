@@ -79,8 +79,6 @@ struct RowAppInfoView: View {
     var ItemOne: String
     var ItemTwo: String
     
-    // MARK: - BODY
-    
     var body: some View {
         VStack {
             HStack {
