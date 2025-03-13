@@ -18,16 +18,19 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            // MARK: - HEADER
             HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
             
             Spacer()
             
+            // MARK: - CARDS
             CardView(honeymoon: honeymoonData[2])
                 // FIXME: Add padding to the cards later on.
                 .padding()
             
             Spacer()
             
+            // MARK: - FOOTER
             FooterView(showBookingAlert: $showAlert)
         } //: VSTACK
         .alert(isPresented: $showAlert) {
