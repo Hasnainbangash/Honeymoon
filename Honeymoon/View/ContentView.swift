@@ -14,6 +14,16 @@ struct ContentView: View {
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
     
+    // MARK: - CARD VIEWS
+    
+    var cardViews: [CardView] = {
+        var views = [CardView]()
+        for honeymoon in honeymoonData {
+            views.append(CardView(honeymoon: honeymoon))
+        }
+        return views
+    }()
+    
     // MARK: - BODY
     
     var body: some View {
@@ -24,9 +34,12 @@ struct ContentView: View {
             Spacer()
             
             // MARK: - CARDS
-            CardView(honeymoon: honeymoonData[2])
-                // FIXME: Add padding to the cards later on.
-                .padding()
+            ZStack {
+                ForEach(cardViews) { cardView in
+                    cardView
+                }
+            }
+            .padding(.horizontal)
             
             Spacer()
             
