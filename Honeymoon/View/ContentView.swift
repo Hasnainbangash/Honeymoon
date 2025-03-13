@@ -47,6 +47,7 @@ struct ContentView: View {
             ZStack {
                 ForEach(cardViews) { cardView in
                     cardView
+                        .zIndex(isTopCard(cardView: cardView) ? 1 : 0)
                 }
             }
             .padding(.horizontal)
