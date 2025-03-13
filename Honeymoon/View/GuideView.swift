@@ -21,8 +21,8 @@ struct GuideView: View {
                 Spacer(minLength: 10)
                 
                 Text("Get Started!")
-                    .font(.largeTitle)
                     .fontWeight(.black)
+                    .font(.largeTitle)
                     .foregroundColor(Color.pink)
                 
                 Text("Discover and pick the perfect destination for your romantic Honeymoon!")
