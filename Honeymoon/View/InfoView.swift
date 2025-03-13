@@ -23,11 +23,7 @@ struct InfoView: View {
                     .fontWeight(.black)
                     .modifier(TitleModifier())
                 
-                HStack {
-                    Text("Application").foregroundColor(Color.gray)
-                    Spacer()
-                    Text("Honeymoon")
-                } //: HSTACK
+                AppInfoView() //: HSTACK
                 
                 Text("Credits")
                     .fontWeight(.black)
@@ -46,6 +42,7 @@ struct InfoView: View {
                     print("A button was tapped.")
                 }) {
                     Text("Continue".uppercased())
+                        .modifier(ButtonModifier())
                 }
             } //: VSTACK
             .frame(minWidth: 0, maxWidth: .infinity)
@@ -60,4 +57,14 @@ struct InfoView: View {
 
 #Preview {
     InfoView()
+}
+
+struct AppInfoView: View {
+    var body: some View {
+        HStack {
+            Text("Application").foregroundColor(Color.gray)
+            Spacer()
+            Text("Honeymoon")
+        }
+    }
 }
