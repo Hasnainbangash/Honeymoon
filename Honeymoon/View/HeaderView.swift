@@ -10,6 +10,7 @@ import SwiftUI
 struct HeaderView: View {
     // MARK: - PROPERTIES
     @Binding var showGuideView: Bool
+    @Binding var showInfoView: Bool
     
     // MARK: - BODY
     
@@ -18,11 +19,15 @@ struct HeaderView: View {
             Button(action: {
                 // ACTION
                 print("Information")
+                self.showInfoView.toggle()
             }) {
                 Image(systemName: "info.circle")
                     .font(.system(size: 24, weight: .regular))
             }
             .accentColor(Color.primary)
+            .sheet(isPresented: $showInfoView) {
+                InfoView()
+            }
             
             Spacer()
             
@@ -54,5 +59,6 @@ struct HeaderView: View {
 
 #Preview(traits: .fixedLayout(width: 375, height: 80)) {
     @State var showGuide: Bool = false
-    HeaderView(showGuideView: $showGuide)
+    @State var showInfo: Bool = false
+    HeaderView(showGuideView: $showGuide, showInfoView: $showInfo)
 }
