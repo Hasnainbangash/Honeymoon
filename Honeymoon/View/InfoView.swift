@@ -55,6 +55,8 @@ struct InfoView: View {
     InfoView()
 }
 
+// MARK: - AppInfoView
+
 struct AppInfoView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -67,6 +69,8 @@ struct AppInfoView: View {
         } //: VSTACK
     }
 }
+
+// MARK: - RowAppInfoView
 
 struct RowAppInfoView: View {
     // MARK: - PROPERTIES
@@ -86,6 +90,8 @@ struct RowAppInfoView: View {
         } //: VSTACK
     }
 }
+
+// MARK: - CreditsView
 
 struct CreditsView: View {
     var body: some View {
