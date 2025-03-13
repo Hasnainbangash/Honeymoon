@@ -58,11 +58,7 @@ struct GuideView: View {
                     self.presentationMode.wrappedValue.dismiss()
                 }) {
                     Text("Continue".uppercased())
-                        .font(.headline)
-                        .padding()
-                        .frame(minWidth: 0, maxWidth: .infinity)
-                        .background(Capsule().fill(Color.pink))
-                        .foregroundColor(Color.white)
+                        .modifier(ButtonModifier())
                 }
             } //: VSTACK
             .frame(minWidth: 0, maxWidth: .infinity)
