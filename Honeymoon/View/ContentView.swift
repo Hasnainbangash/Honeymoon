@@ -14,6 +14,7 @@ struct ContentView: View {
     @State var showGuide: Bool = false
     @State var showInfo: Bool = false
     @GestureState private var dragState = DragState.inactive
+    private var dragAreaThreshold: CGFloat = 65.0
     
     // MARK: - CARD VIEWS
     
@@ -91,10 +92,14 @@ struct ContentView: View {
                                 // X-MARK SYMBOL
                                 Image(systemName: "x.circle")
                                     .modifier(SymbolModifier())
+                                    // Show the x mark symbol only when the drag is less than -65 and its the first card
+                                    .opacity(self.dragState.translation.width < -self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
                                 
                                 // HEART SYMBOL
                                 Image(systemName: "heart.circle")
                                     .modifier(SymbolModifier())
+                                    // Show the heart mark symbol only when the drag is greater than 65 and its the first card
+                                    .opacity(self.dragState.translation.width > self.dragAreaThreshold && self.isTopCard(cardView: cardView) ? 1.0 : 0.0)
                             } //: ZSATCK
                         )
                         .offset(x: self.isTopCard(cardView: cardView) ? self.dragState.translation.width : 0, y: self.isTopCard(cardView: cardView) ? self.dragState.translation.height : 0)
