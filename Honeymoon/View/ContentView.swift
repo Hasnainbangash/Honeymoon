@@ -87,6 +87,7 @@ struct ContentView: View {
                     cardView
                         .zIndex(isTopCard(cardView: cardView) ? 1 : 0)
                         .offset(x: self.dragState.translation.width, y: self.dragState.translation.height)
+                        .scaleEffect(self.dragState.isDragging ? 0.85 : 1.0)
                         .animation(.interpolatingSpring(stiffness: 120, damping: 120))
                         .gesture(
                             LongPressGesture(minimumDuration: 0.01)
