@@ -142,6 +142,15 @@ struct ContentView: View {
                                         break
                                     }
                                 })
+                                .onEnded({ (value) in
+                                    guard case .second(true, let drag?) = value else {
+                                        return
+                                    }
+                                    
+                                    if drag.translation.width < -self.dragAreaThreshold || drag.translation.width > self.dragAreaThreshold {
+                                        self.moveCards()
+                                    }
+                                })
                         )
                 }
             }
