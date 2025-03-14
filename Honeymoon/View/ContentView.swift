@@ -91,8 +91,10 @@ struct ContentView: View {
                                 .sequenced(before: DragGesture())
                                 .updating(self.$dragState, body: { value, state, transaction in
                                     switch value {
+                                    // This means the long press just started.
                                     case .first(true):
                                         state = .pressing
+                                    // This means the drag gesture has started after the press.
                                     case .second(true, let drag):
                                         state = .dragging(translation: drag?.translation ?? .zero)
                                     default:
